@@ -1,0 +1,19 @@
+{
+    "name": "Prototypes.Interactables.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:974381af7b6e1fa46be59eb3a22f4785",
+        "GUID:57a6d82589ae03c4cabdc058f719f231"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

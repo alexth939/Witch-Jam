@@ -1,0 +1,18 @@
+{
+    "name": "Prototypes.StringHolder.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:77b19438c5609e946bdbcbad65faf93f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
