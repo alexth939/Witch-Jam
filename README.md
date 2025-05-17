@@ -13,3 +13,25 @@ If you want to use a new or existing asset, copy it into an appropriate subfolde
 Instead, create your own assembly definitions.
 Recommended approach: one assembly per minigame.
 Exception: shared or common code may have its own shared assembly.
+
+## Minigames:
+
+### Bomberman
+
+...
+
+### Pipes Runner
+
+...
+
+### Zuma
+
+...
+
+### Platforms Jumper
+
+...
+
+### Plants vs Zombies
+
+...
