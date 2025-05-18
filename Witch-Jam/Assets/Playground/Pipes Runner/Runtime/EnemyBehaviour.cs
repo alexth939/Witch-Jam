@@ -15,5 +15,10 @@ namespace Playground.PipesRunner
 
             transform.position = Vector3.MoveTowards(pointA, pointB, movementDelta);
         }
+
+        private void FixedUpdate()
+        {
+            transform.LookAt(_chasingTarget, Vector3.up);
+        }
     }
 }
