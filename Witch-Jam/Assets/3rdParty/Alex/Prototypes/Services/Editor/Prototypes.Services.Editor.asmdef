@@ -1,8 +1,12 @@
 {
-    "name": "Prototypes.GameServices",
+    "name": "Prototypes.Services.Editor",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [],
+    "references": [
+        "GUID:ac533ab101ea65140a96d9104ad4413d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

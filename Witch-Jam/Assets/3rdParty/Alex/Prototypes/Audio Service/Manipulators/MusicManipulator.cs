@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Prototypes.GameServices;
+using Prototypes.Services.Samples;
 using Runtime.Services;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ namespace Runtime.Manipulators
 
         public bool IsMusicLoops { get; set; } = true;
 
-        private IAudioService AudioService => ServiceContainer.Instance.Get<IAudioService>();
+        private IAudioService AudioService => GameServiceLocator.Instance.Get<IAudioService>();
 
         public void PauseMusic() => PauseMusic(DefaultPlayerIndex);
 
