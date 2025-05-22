@@ -1,5 +1,5 @@
 {
-    "name": "Prototypes.HierarchyObjectPathLogger.Editor",
+    "name": "UnityTools.HierarchyObjectPathLogger.Editor",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [

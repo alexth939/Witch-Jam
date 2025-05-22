@@ -2,7 +2,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.SceneManagement;
 
-namespace Prototypes.Intros
+namespace Prototypes.Manipulators
 {
     public class SceneLoader : MonoBehaviour
     {

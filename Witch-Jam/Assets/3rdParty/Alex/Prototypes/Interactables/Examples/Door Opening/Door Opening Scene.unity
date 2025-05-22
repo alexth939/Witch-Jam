@@ -517,23 +517,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectEntered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1617186976}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play
-          m_BoolArgument: 1
-        m_CallState: 2
+    _PersistentCalls:
+    - _Target: {fileID: 1617186976}
+      _MemberName: set_enabled
+      _PersistentArguments:
+      - _Type: 1
+        _Int: 1
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
   _objectExited:
-    m_PersistentCalls:
-      m_Calls: []
+    _PersistentCalls: []
 --- !u!65 &1600719536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -826,7 +823,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2ded7645929e1746befa52ddd920fbb, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
