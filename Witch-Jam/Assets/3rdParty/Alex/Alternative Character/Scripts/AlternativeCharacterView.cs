@@ -11,7 +11,6 @@ namespace Runtime
         [SerializeField] private Transform _aimingIKTarget;
         [SerializeField, Range(0f, 1f)] private float _maxHandIKWeight;
         [SerializeField, Range(0f, 1f)] private float _maxHeadIKWeight;
-        [SerializeField] private ParticleSystem _shootEffect;
         [SerializeField] private ParticleSystem _sprintEffect;
         [SerializeField] private float _turningSpeed = 500f;
 
@@ -85,18 +84,6 @@ namespace Runtime
         public void SetMovingDirection(Vector3 direction) => _movingDirection = direction;
 
         public void SetMovingSpeed(float speed) => _movingSpeed = speed;
-
-        public void Shoot()
-        {
-            if(_shootEffect == null)
-            {
-                Debug.LogWarning($"Shoot effect is null!");
-
-                return;
-            }
-
-            _shootEffect.Play();
-        }
 
         public void StopSprintEffect()
         {

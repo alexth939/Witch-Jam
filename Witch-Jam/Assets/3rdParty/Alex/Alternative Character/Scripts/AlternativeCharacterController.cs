@@ -20,6 +20,9 @@ namespace Runtime
         [SerializeField]
         private AlternativeCharacterView _view;
 
+        [SerializeField]
+        private SpellRunnerBehaviour _weapon;
+
         [SerializeField, Tooltip(BaseSpeedTooltip)]
         private float _baseMovingSpeed = 5f;
 
@@ -30,24 +33,11 @@ namespace Runtime
         private float _sprintEaseDuration = 1f;
 
         private bool _isSprinting = false;
-        private Coroutine _shootingLoopCoroutine;
         private float _sprintEffectiveness = 0;
 
         private float FinalMovingSpeed => _baseMovingSpeed + SprintSpeedContribution;
 
         private float SprintSpeedContribution => 1f * _sprintEffectiveness * _sprintSpeedPotential;
-
-        private IEnumerator CreateShootingLoop(float interval)
-        {
-            var waitCommand = new WaitForSeconds(interval);
-
-            while(true)
-            {
-                _view.Shoot();
-
-                yield return waitCommand;
-            }
-        }
 
         private Vector3 GetPointerRelativeToPlayerDirection()
         {
@@ -74,20 +64,8 @@ namespace Runtime
             return pointerDirection;
         }
 
-        private void ShootOnce() => _view.Shoot();
-
-        private void StartShootingLoop()
-        {
-            float interval = 0.5f;
-            IEnumerator shootingLoop = CreateShootingLoop(interval);
-            _shootingLoopCoroutine = StartCoroutine(shootingLoop);
-        }
-
-        private void StopShootingLoop()
-        {
-            if(_shootingLoopCoroutine != null)
-                StopCoroutine(_shootingLoopCoroutine);
-        }
+        //private void ShootOnce() => _view.Shoot();
+        //private void ShootOnce() => _weapon.Shoot();
 
         private void Update()
         {
@@ -103,15 +81,13 @@ namespace Runtime
             if(Input.GetKeyDown(KeyCode.Mouse1))
             {
                 _view.ToggleAimingOn();
-                _view.FullyAimed += ShootOnce;
-                //_view.FullyAimed += StartShootingLoop;
+                _view.FullyAimed += _weapon.ToggleShootingOn;
             }
             else if(Input.GetKeyUp(KeyCode.Mouse1))
             {
                 _view.ToggleAimingOff();
-                _view.FullyAimed -= ShootOnce;
-                //_view.FullyAimed -= StartShootingLoop;
-                //StopShootingLoop();
+                _view.FullyAimed -= _weapon.ToggleShootingOn;
+                _weapon.ToggleShootingOff();
             }
 
             if(_view.IsAiming)
